@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { Category } from './Category';
+// import { Category } from './Category';
 import menu from './Data';
-import { Menu } from './Menu';
+// import { Menu } from './Menu';
 
 function App() {
 const [menuitems, setmenuitems]= useState(menu)
@@ -14,7 +14,7 @@ let allcat=[...new Set(menu.map((obj)=>{
 // console.log(allcat)
 function selected(item){
  var newmenu=menu.filter((obj)=>{
-  return obj.category==item
+  return obj.category===item
 })
 setmenuitems(newmenu)
 }
